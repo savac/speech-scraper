@@ -68,7 +68,6 @@ def parseHtml(textHtml):
     except IndexError:
         text='unknown'
 
-
     '''
     <h1 id=amprestitle>First Inaugural Address (January 20, 2001)</h1>
     <h2 style="margin: 0; padding: 0;">George W. Bush</h2>
@@ -106,7 +105,7 @@ if __name__ == '__main__':
     links = get_speech_links(indexUrl,linkMatch)
 
     i=0
-    for link in links[0:50]:
+    for link in links:
         i+=1
         print '%d/%d' %(i, len(links))
         fileOut = outDir + '/' + link.replace('/', '_') + '.txt'
